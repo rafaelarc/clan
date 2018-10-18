@@ -1,0 +1,34 @@
+html, body { margin: 0; padding: 0; overflow-x: hidden; }
+html.overflow-hidden, body.overflow-hidden { overflow: hidden; }
+
+body { padding-top: 60px; }
+
+.roiNav { background: #222; height: 60px; position: fixed; top: 0; width: 100%; z-index: 600; }
+.roiNav ul { height: 60px; margin: 0; padding: 0; }
+@media screen and (max-width: 1024px) { .roiNav ul { height: auto; } }
+
+.roiNav-logo { display: block; padding: 0 1rem; }
+@media screen and (max-width: 1024px) { .roiNav-logo { left: 50%; padding: 0; position: absolute; top: 50%; transform: translate(-50%, -50%); } }
+
+.roiNav-item { display: inline-block; margin: 0; padding: 0; }
+.roiNav-item a { color: #fff; display: block; height: 60px; line-height: 60px; padding: 0 1rem; transition: 300ms ease; }
+.roiNav-item a.is-current { color: #e3d081; }
+.roiNav-item a:hover { color: #e3d081; }
+.roiNav-item:last-child a, .roiNav-item:last-child a:hover { color: #333; }
+@media screen and (max-width: 1024px) { .roiNav-item { display: block; } }
+
+.roiNav nav { overflow: hidden; }
+@media screen and (max-width: 1024px) { .roiNav nav { position: fixed; display: block; overflow-y: auto; overflow-x: hidden; width: 200px; height: 100vh; height: calc(100vh - 60px); top: 60px; right: -200px; -webkit-transition: right 600ms ease-in-out; transition: right 600ms ease-in-out; background: #222; z-index: 300; }
+  .roiNav nav.is-visible { right: 0; } }
+
+.roiNav-trigger { display: none; height: 24px; width: 24px; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); right: 1rem; z-index: 400; }
+.roiNav-trigger span { background-color: #fff; display: block; position: absolute; width: 24px; height: 2px; -webkit-transition: 300ms ease-in-out; transition: 300ms ease-in-out; }
+.roiNav-trigger span:first-child { top: 9px; }
+.roiNav-trigger span:last-child { top: 15px; width: 16px; right: 0; }
+.roiNav-trigger.is-clicked span { top: 11px; background: #e3d081; }
+.roiNav-trigger.is-clicked span:first-child { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.roiNav-trigger.is-clicked span:last-child { width: 24px; right: auto; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+@media screen and (max-width: 1024px) { .roiNav-trigger { display: block; } }
+
+.roiFooter { background: #222; overflow: hidden; padding: 4.263rem 0; }
+.roiFooter span { color: #999; }
