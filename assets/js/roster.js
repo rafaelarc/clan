@@ -1,10 +1,9 @@
 var
   apiKey = "95c4f6fc3c84468ebeeb8f94129d03e5",
-  groupID = "3241808",
   members = [];
 
 $.ajax({
-  url: "https://www.bungie.net/platform/GroupV2/" + groupID + "/members/",
+  url: "https://www.bungie.net/platform/GroupV2/3241808/members/",
   headers: {
     "X-API-Key": apiKey
   }
